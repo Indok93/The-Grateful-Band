@@ -27,4 +27,11 @@
   font-family: "Shantell Sans", cursive;
   font-size: 3.5rem;
   color: #444;
+}
+.mainContainer header {
+  height: 100vh;
+  background: url("/assets/uploads/images/pexels-vishnu-r-nair-1105666.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }/*# sourceMappingURL=main.css.map */
