@@ -1,4 +1,4 @@
-#The Grateful Band 
+# The Grateful Band 
 Bandet The Grateful, vil rigtig gerne have et website, som kan give deres fans en fed oplevelse, udover det sædvanlige. Der skal være animationer, farver, gerne noget fra pop/rock stilen.
 
 Hjemmesiden skal informere deres fans om selve bandet (Bandet består af 4 personer, hvem er de, hvad er deres rolle i bandet), tours (koncert datoer, sted m.m.), media (Billeder m.m.), discography (alle deres album).
