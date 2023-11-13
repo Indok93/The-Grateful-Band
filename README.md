@@ -1,1 +1,6 @@
-# js-functions-calculator
+#variables
+- colors
+- repeating numbers
+
+#html
+
