@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/styling/css/main.css">
     <script src="/assets/js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/7631ec8517.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -32,21 +33,35 @@
         <header class="hero" id="hero">
             <!-- Skal fungere som en Hero (som skifter imellem et par billeder, dog med bullets i stedet for arrows) -->
             <div class="hero-content">
+                <ul class="background-bullets">
+                    <li class="bullet" onclick="changeBackground('/assets/uploads/images/pexels-vishnu-r-nair-1105666.jpg')"></li>
+                    <li class="bullet" onclick="changeBackground('/assets/uploads/images/pexels-josh-sorenson-995301.jpg')"></li>
+                    <li class="bullet" onclick="changeBackground('/assets/uploads/images/pexels-jc-siller-8634867.jpg')"></li>
+                </ul>
                 <form action="#">
                     <input type="text">
-                    <label for="#">signup</label>
                 </form>
             </div>
         </header>
         <footer>
             <!-- icons(facebook, instagram, spotify, twitter, youtube, reddit) -->
             <!-- fixed til bottom -->
-            <div>
-                <a href="#">facebook</a>
-                <a href="#">instagram</a>
-                <a href="#">twitter</a>
-                <a href="#">youtube</a>
-                <a href="#">spotify</a>
+            <div class="iconContainer">
+                <div>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div>
+                    <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <div>
+                    <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+                </div>
+                <div>
+                    <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+                </div>
+                <div>
+                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                </div>
             </div>
         </footer>
     </div>

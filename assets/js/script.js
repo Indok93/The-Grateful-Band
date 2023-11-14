@@ -7,5 +7,7 @@ buttonBurger.addEventListener('click', () => {
     navBar.style.display = 'flex';
 });
 
-/* Lav en funktion der ændre property display 
-til none når burger-menu er hoveredklikket */
+function changeBackground(url) {
+    document.querySelector('header').style.backgroundImage = `url('${url}')`;
+}
+

@@ -26,6 +26,7 @@ body {
         display: grid;
         height: 60px;
         background-color: #444;
+        border-radius: 50% 50% 0 0;
         position: fixed;
         bottom: 0;
         width: 100%;
@@ -66,10 +67,11 @@ body {
                 list-style: none;
                 margin-bottom: 0.5em;
                 img {
-                    width: 60px;
+                    width: 75px;
                     position: absolute;
-                    top: -60px;
-                    left: 0;
+                    top: 0.5em;
+                    left: 0.5em;
+                    border-radius: 50%;
                 }
                 a {
                     text-decoration: none;
@@ -92,24 +94,75 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
-        form {
+        .background-bullets {
+            list-style: none;
+            padding: 0;
             position: absolute;
             bottom: 20vh;
+            width: 100%;
+            text-align: center;
+            z-index: 1;
+            .bullet {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                background-color: #fff;
+                margin-right: 5px;
+                cursor: pointer;
+                &:hover {
+                    opacity: 0.5;
+                }
+            }
+        }
+        form {
+            position: absolute;
+            bottom: 30vh;
             right: 0;
             input {
 
             }
-            label {
-                color: #fff;
-            }
         }
     }
     footer {
-        position: absolute;
-        bottom: 25vw;
-        div {
-            a {
-
+        position: fixed;
+        bottom: 5rem;
+        width: 100%;
+        .iconContainer {
+            display: flex;
+            justify-content: center;
+            div {
+                margin: 0 0.5em;
+                a {
+                    i {
+                        font-size: 50px;
+                    }
+                    .fa-facebook {
+                        color: #1877F2;
+                        background-color: #fff;
+                        border-radius: 6vw;
+                    }
+                    .fa-square-instagram {
+                        background: linear-gradient(to right, #feda75 0%, #fa7e1e 20%, #d62976 40%, #962fbf 60%, #4f5bd5 80%);
+                        border-radius: 2vw;
+                        color: #fff;
+                    }
+                    .fa-square-twitter {
+                        color: #1DA1F2;
+                        background-color: #fff;
+                        border-radius: 2vw;
+                    }
+                    .fa-square-youtube {
+                        background-color: red;
+                        color: #fff;
+                        border-radius: 2vw;
+                    }
+                    .fa-spotify {
+                        color: #1DB954;
+                        background-color: #fff;
+                        border-radius: 6vw;
+                    }
+                }
             }
         }
     }

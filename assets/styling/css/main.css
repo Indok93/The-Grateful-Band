@@ -16,6 +16,7 @@ body img {
   display: grid;
   height: 60px;
   background-color: #444;
+  border-radius: 50% 50% 0 0;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -56,10 +57,11 @@ body img {
   margin-bottom: 0.5em;
 }
 .mainContainer nav ul li img {
-  width: 60px;
+  width: 75px;
   position: absolute;
-  top: -60px;
-  left: 0;
+  top: 0.5em;
+  left: 0.5em;
+  border-radius: 50%;
 }
 .mainContainer nav ul li a {
   text-decoration: none;
@@ -80,18 +82,73 @@ body img {
   background-size: cover;
   position: relative;
 }
-.mainContainer header form {
+.mainContainer header .background-bullets {
+  list-style: none;
+  padding: 0;
   position: absolute;
   bottom: 20vh;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.mainContainer header .background-bullets .bullet {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.mainContainer header .background-bullets .bullet:hover {
+  opacity: 0.5;
+}
+.mainContainer header form {
+  position: absolute;
+  bottom: 30vh;
   right: 0;
 }
-.mainContainer header form label {
+.mainContainer footer {
+  position: fixed;
+  bottom: 5rem;
+  width: 100%;
+}
+.mainContainer footer .iconContainer {
+  display: flex;
+  justify-content: center;
+}
+.mainContainer footer .iconContainer div {
+  margin: 0 0.5em;
+}
+.mainContainer footer .iconContainer div a i {
+  font-size: 50px;
+}
+.mainContainer footer .iconContainer div a .fa-facebook {
+  color: #1877F2;
+  background-color: #fff;
+  border-radius: 6vw;
+}
+.mainContainer footer .iconContainer div a .fa-square-instagram {
+  background: linear-gradient(to right, #feda75 0%, #fa7e1e 20%, #d62976 40%, #962fbf 60%, #4f5bd5 80%);
+  border-radius: 2vw;
   color: #fff;
 }
-.mainContainer footer {
-  position: absolute;
-  bottom: 25vw;
+.mainContainer footer .iconContainer div a .fa-square-twitter {
+  color: #1DA1F2;
+  background-color: #fff;
+  border-radius: 2vw;
 }
+.mainContainer footer .iconContainer div a .fa-square-youtube {
+  background-color: red;
+  color: #fff;
+  border-radius: 2vw;
+}
+.mainContainer footer .iconContainer div a .fa-spotify {
+  color: #1DB954;
+  background-color: #fff;
+  border-radius: 6vw;
+}
+
 @keyframes up-rotate {
   0% {
     animation-timing-function: cubic-bezier(0.16, -0.88, 0.97, 0.53);
