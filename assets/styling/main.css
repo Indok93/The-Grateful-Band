@@ -6,12 +6,16 @@
   box-sizing: border-box;
 }
 
-body img {
-  width: 100%;
-}
-
 .mainContainer {
   width: 100%;
+}
+.mainContainer img {
+  width: 75px;
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+  border-radius: 50%;
+  z-index: 1;
 }
 .mainContainer .burger-menu {
   display: grid;

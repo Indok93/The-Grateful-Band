@@ -6,8 +6,12 @@ buttonBurger.addEventListener('click', (e) => {
     const navBar = document.getElementById('navigation');
     const burgerMenu = document.querySelector('.burger-menu');
     const cards = document.querySelector('.card-wrapper');
+    const logo = document.getElementById('logo-main');
     navBar.style.display = 'flex';
     burgerMenu.style.backgroundColor = 'transparent';
+    if (logo) {
+        logo.display.style = 'none';
+    }
     if (cards) {
         cards.style.display = 'none';
     }
