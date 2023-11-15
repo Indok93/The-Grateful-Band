@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body img {
@@ -15,8 +16,6 @@ body img {
 .mainContainer .burger-menu {
   display: grid;
   height: 60px;
-  background-color: #444;
-  border-radius: 50% 50% 0 0;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -27,34 +26,34 @@ body img {
 .mainContainer .burger-menu .burger-bottom {
   width: 80px;
   height: 8px;
-  background-color: #fedabe;
+  background-color: #D5D5D5;
   border-radius: 20px;
   margin: auto;
 }
 .mainContainer .burger-menu:hover .burger-top {
-  animation: down-rotate 0.6s ease-out both;
+  animation: down-rotate 1.5s ease-out both;
 }
 .mainContainer .burger-menu:hover .burger-middle {
-  animation: hide 0.6s ease-out forwards;
+  animation: hide 1.5s ease-out forwards;
 }
 .mainContainer .burger-menu:hover .burger-bottom {
-  animation: up-rotate 0.6s ease-out both;
+  animation: up-rotate 1.5s ease-out both;
 }
 .mainContainer nav {
   display: none;
-  justify-content: center;
+  justify-content: right;
   position: absolute;
   width: 100%;
   z-index: 2;
 }
 .mainContainer nav ul {
   display: inline-block;
-  text-align: center;
+  text-align: right;
 }
 .mainContainer nav ul li {
   display: block;
   list-style: none;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }
 .mainContainer nav ul li img {
   width: 75px;
@@ -65,13 +64,24 @@ body img {
 }
 .mainContainer nav ul li a {
   text-decoration: none;
-  text-transform: capitalize;
   font-family: "Shantell Sans", cursive;
+  text-transform: capitalize;
   font-size: 2rem;
-  color: #fedabe;
-  background-color: rgba(68, 68, 68, 0.5019607843);
-  border-radius: 20px;
+  color: #D5D5D5;
+  border-radius: 35px;
   padding: 0 20px;
+}
+.mainContainer nav ul li .highlighted {
+  font-weight: 600;
+  background-color: #505050;
+}
+.mainContainer nav ul li:nth-child(2) {
+  font-weight: 600;
+}
+.mainContainer nav ul li:nth-child(2) a {
+  text-transform: uppercase;
+  border: none;
+  text-decoration: underline;
 }
 .mainContainer header {
   height: 100vh;
@@ -81,6 +91,101 @@ body img {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+}
+.mainContainer header .form-wrapper {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 30vh;
+  left: 0;
+  width: 100%;
+}
+.mainContainer header .form-wrapper .form-box {
+  width: 300px;
+  height: 40px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 60px;
+  overflow: hidden;
+}
+.mainContainer header .form-wrapper .form-box #signup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.mainContainer header .form-wrapper .form-box #signup .add-email {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+  font-family: "Shantell Sans", cursive;
+  text-transform: capitalize;
+}
+.mainContainer header .form-wrapper .form-box #signup .add-email::-moz-placeholder {
+  font-family: "Shantell Sans", cursive;
+  text-transform: capitalize;
+}
+.mainContainer header .form-wrapper .form-box #signup .add-email::placeholder {
+  font-family: "Shantell Sans", cursive;
+  text-transform: capitalize;
+}
+.mainContainer header .form-wrapper .form-box #signup #submitButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(100% - 2px);
+  width: 100px;
+  border: none;
+  border-radius: 60px;
+  outline: none;
+  margin: 1px;
+  padding: 0 20px;
+  cursor: pointer;
+  background: #1DB954;
+  color: #fff;
+  font-family: "Shantell Sans", cursive;
+  text-transform: capitalize;
+  transition: all 0.3s ease-out;
+}
+.mainContainer header .form-wrapper .form-box #signup #submitButton .before-submit {
+  text-transform: capitalize;
+}
+.mainContainer header .form-wrapper .form-box #signup #submitButton .after-submit {
+  display: none;
+}
+.mainContainer header .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.mainContainer header .card-wrapper .card {
+  border: 2px solid #fff;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  margin: 1em;
+}
+.mainContainer header .card-wrapper .card p {
+  font-family: "Shantell Sans", cursive;
+  text-transform: capitalize;
+  font-size: 1.7rem;
+}
+.mainContainer header .card-wrapper .card p:last-child {
+  font-weight: 800;
+}
+.mainContainer header .card-wrapper div:nth-child(1) {
+  color: #232323;
+}
+.mainContainer header .card-wrapper div:nth-child(2) {
+  color: #505050;
+}
+.mainContainer header .card-wrapper div:nth-child(3) {
+  color: #ACACAC;
+}
+.mainContainer header .card-wrapper div:last-child {
+  color: #fff;
 }
 .mainContainer header .background-bullets {
   list-style: none;
@@ -103,10 +208,26 @@ body img {
 .mainContainer header .background-bullets .bullet:hover {
   opacity: 0.5;
 }
-.mainContainer header form {
+.mainContainer header .background-bullets-people {
+  list-style: none;
+  padding: 0;
   position: absolute;
-  bottom: 30vh;
-  right: 0;
+  bottom: 10vh;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.mainContainer header .background-bullets-people .bullet {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.mainContainer header .background-bullets-people .bullet:hover {
+  opacity: 0.5;
 }
 .mainContainer footer {
   position: fixed;
