@@ -1,0 +1,13 @@
+@mixin mainLogo {
+    #logo-main {
+        width: 75px;
+        position: absolute;
+        top: 1.5em;
+        left: 1.5em;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    #logo-main.active {
+        visibility: hidden;
+    }
+}

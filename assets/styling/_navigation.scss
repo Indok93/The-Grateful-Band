@@ -1,0 +1,48 @@
+@mixin navigation-mobile {
+    nav {
+        display: none;
+        justify-content: right;
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        ul {
+            display: inline-block;
+            text-align: right;
+            li {
+                display: block;
+                list-style: none;
+                margin-bottom: 1em;
+                img {
+                    width: 75px;
+                    position: absolute;
+                    top: 0.5em;
+                    left: 0.5em;
+                    border-radius: 50%;
+                }
+                a {
+                    text-decoration: none;
+                    @include font;
+                    font-size: 2rem;
+                    color: $color-white;
+                    border-radius: 35px;
+                    padding: 0 20px;
+                }
+                .highlighted {
+                    font-weight: 600;
+                    background-color: $color-grey;
+                }
+            }
+            li:nth-child(2) {
+                font-weight: 600;
+                a{
+                    text-transform: uppercase;
+                    border: none;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    nav.active {
+        display: flex;
+    }
+}

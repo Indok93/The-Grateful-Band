@@ -1,0 +1,47 @@
+@mixin background-bullets {
+    .background-bullets {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        bottom: 20vh;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        .bullet {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $color-white-plain;
+            margin-right: 5px;
+            opacity: 0.5;
+            cursor: pointer;
+            
+        }
+        .bullet.active {
+            opacity: 1;
+        }
+    }
+    .background-bullets-other {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        bottom: 10vh;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        .bullet {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: $color-white-plain;
+            margin-right: 5px;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+        .bullet.active {
+            opacity: 1;
+        }
+    }
+}

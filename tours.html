@@ -11,7 +11,7 @@
 <body>
 
     <div class="mainContainer">
-        <!-- Navigation (Home, The Band, Tour, Name(HIGHLIGHT), Music, Merch, Contact) -->
+        <img src="/assets/uploads/images/Grateful-logo.png" alt="logo" id="logo-main">
         <div class="burger-menu" id="burgerMenu">
             <div class="burger-top"></div>
             <div class="burger-middle"></div>
@@ -32,11 +32,14 @@
         </nav>
         <header>
             <!-- Skal fungere som en Hero (som skifter imellem et par billeder, dog med bullets i stedet for arrows) -->
-                <ul class="background-bullets-people">
-                    <li class="bullet" onclick="changeBackground('/assets/uploads/images/pexels-vishnu-r-nair-1105666.jpg')"></li>
-                    <li class="bullet" onclick="changeBackground('/assets/uploads/images/pexels-josh-sorenson-995301.jpg')"></li>
-                    <li class="bullet" onclick="changeBackground('/assets/uploads/images/pexels-jc-siller-8634867.jpg')"></li>
-                </ul>
+            <ul class="background-bullets-other">
+                <li class="bullet" onclick="changeBackground(0)"></li>
+                <li class="bullet" onclick="changeBackground(1)"></li>
+                <li class="bullet" onclick="changeBackground(2)"></li>
+                <li class="bullet" onclick="changeBackground(3)"></li>
+                <li class="bullet" onclick="changeBackground(4)"></li>
+                <li class="bullet" onclick="changeBackground(5)"></li>
+            </ul>
                 <div class="form-wrapper" style="display: none;">
                     <div class="form-box">
                         <form id="signup">

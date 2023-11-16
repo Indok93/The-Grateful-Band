@@ -1,0 +1,36 @@
+@mixin cards-mobile {
+    .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        .card{
+            border: 2px solid $color-white-plain;
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            margin: 1em;
+            p {
+                @include font;
+                font-size: 1.7rem;
+                
+            }
+            p:last-child {
+                font-weight: 800;
+            }
+        }
+        div:nth-child(1) {
+            color: $color-light-black;
+        }
+        div:nth-child(2) {
+            color: $color-grey;
+        }
+        div:nth-child(3) {
+            color: $color-light-grey;
+        }
+        div:last-child {
+            color: $color-white-plain; 
+        }
+    }
+    .card-wrapper.active{
+        visibility: hidden;
+    }
+}

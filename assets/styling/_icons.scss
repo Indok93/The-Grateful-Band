@@ -1,0 +1,39 @@
+@mixin icons-mobile {
+    .iconContainer {
+        display: flex;
+        justify-content: center;
+        div {
+            margin: 0 0.5em;
+            a {
+                i {
+                    font-size: 50px;
+                }
+                .fa-facebook {
+                    color: #1877F2;
+                    background-color: #fff;
+                    border-radius: 6vw;
+                }
+                .fa-square-instagram {
+                    background: linear-gradient(to right, #feda75 0%, #fa7e1e 20%, #d62976 40%, #962fbf 60%, #4f5bd5 80%);
+                    border-radius: 2vw;
+                    color: #fff;
+                }
+                .fa-square-twitter {
+                    color: #1DA1F2;
+                    background-color: #fff;
+                    border-radius: 2vw;
+                }
+                .fa-square-youtube {
+                    background-color: red;
+                    color: #fff;
+                    border-radius: 2vw;
+                }
+                .fa-spotify {
+                    color: $color-green;
+                    background-color: #fff;
+                    border-radius: 6vw;
+                }
+            }
+        }
+    }
+}
