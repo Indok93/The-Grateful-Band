@@ -16,14 +16,16 @@ buttonBurger.addEventListener('click', (e) => {
 });
 
 const buttonSubmit = document.getElementById('submitButton');
-buttonSubmit.addEventListener('click', (e) => {
-    e.preventDefault();
-    // console.log(buttonSubmit);
-    buttonSubmit.style.width = 'calc(100% - 2px)';
-    buttonText = document.querySelector('.before-submit');
-    buttonText.innerText = 'Subscribed';
+if (buttonSubmit) {
+    buttonSubmit.addEventListener('click', (e) => {
+        e.preventDefault();
+        // console.log(buttonSubmit);
 
-});
+        buttonSubmit.style.width = 'calc(100% - 2px)';
+        buttonText = document.querySelector('.before-submit');
+        buttonText.innerText = 'Subscribed';
+    });
+}
 
 
 let currentBackgroundIndex = 0;
@@ -57,4 +59,4 @@ function nextBackground() {
 }
 
 // Change background every x amount of seconds (in milliseconds)
-setInterval(nextBackground, 5000);
+setInterval(nextBackground, 10000);
