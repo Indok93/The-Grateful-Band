@@ -93,4 +93,4 @@ function nextBackground() {
 }
 
 // Change background every x amount of seconds (in milliseconds)
-setInterval(nextBackground, 5000122);
+setInterval(nextBackground, 10000);
