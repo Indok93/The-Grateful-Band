@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 @mixin burger-menu-mobile {
     .burger-menu {
         display: grid;

@@ -1,0 +1,50 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
+@mixin tours-mobile {
+    .tours-wrapper {
+        width: 335px;
+        position: absolute;
+        top: 6.5rem;
+        left: 20px;
+        border: 2px solid $color-grey;
+        border-radius: 10px;
+        padding: 10px;
+        @include font;
+        h2 {
+            text-align: center;
+            color: $color-white-plain;
+            font-size: 2em;
+        }
+        .tours-name {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            color: $color-white-plain;
+            h3 {
+                font-weight: 900;
+            }
+        }
+        .tours-contents {
+            margin-top: 1em;
+            .tours-content-position {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                color: $color-white-plain;
+                margin-bottom: 1.6em;
+                p {
+                    font-weight: 700;
+                    text-align: center;
+                    span {
+                        font-weight: 200;
+                    }
+                }
+                p:first-child {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+    .tours-wrapper.active {
+        visibility: hidden;
+    }
+}

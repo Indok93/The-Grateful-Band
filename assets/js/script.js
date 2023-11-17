@@ -7,11 +7,15 @@ buttonBurger.addEventListener('click', (e) => {
     const cards = document.querySelector('.card-wrapper');
     const logo = document.getElementById('logo-main');
     const burger = document.querySelector('.burger-menu');
+    const tour = document.querySelector('.tours-wrapper');
     burger.classList.toggle('active');
     navBar.classList.toggle('active');
     logo.classList.toggle('active');
     if (cards) {
-    cards.classList.toggle('active');
+        cards.classList.toggle('active');
+    }
+    if (tour) {
+        tour.classList.toggle('active');
     }
 });
 
@@ -24,6 +28,7 @@ if (buttonSubmit) {
         buttonSubmit.style.width = 'calc(100% - 2px)';
         buttonText = document.querySelector('.before-submit');
         buttonText.innerText = 'Subscribed';
+        /* MANGLER VALIDERING, snippets forsvundet */
     });
 }
 

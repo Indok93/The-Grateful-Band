@@ -1,21 +1,19 @@
-@import "./colors";
-@import "./fonts";
-@import "./reset";
-@import "./logo";
-@import "./burger-menu";
-@import "./navigation";
-@import "./form";
-@import "./cards";
-@import "./bullets";
-@import "./icons";
+@use "./reset" as doesthiswork;
+@use "./logo" as *;
+@use "./burger-menu" as *;
+@use "./navigation" as *;
+@use "./form" as *;
+@use "./cards"as *;
+@use "./bullets" as *;
+@use "./icons" as *;
+@use "./tours" as *;
+@use "./hero" as *;
 
 * {
-    @include reset;
+    @include doesthiswork.reset;
     box-sizing: border-box;
+    // color: black;
 }
-
-/* body {
-} */
 
 .mainContainer {
     width: 100%;
@@ -23,14 +21,8 @@
     @include burger-menu-mobile;
     @include navigation-mobile;
     header {
-        height: 100vh;
-        background: url('/assets/uploads/images/pexels-vishnu-r-nair-1105666.jpg');
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        transition: background-image 0.5s ease-in-out;
+        @include hero-mobile-fixed;
+        @include tours-mobile;
         @include subscribe-form-mobile;
         @include cards-mobile;
         @include background-bullets;

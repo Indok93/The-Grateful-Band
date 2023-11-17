@@ -1,3 +1,6 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
 @mixin subscribe-form-mobile{
     .form-wrapper {
         display: flex;

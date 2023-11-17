@@ -1,3 +1,6 @@
+@use "./colors" as *;
+@use "./fonts" as *;
+
 @mixin cards-mobile {
     .card-wrapper {
         display: grid;

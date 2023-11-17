@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-/* font-family: 'Shantell Sans', cursive; */
 @keyframes up-rotate {
   0% {
     animation-timing-function: cubic-bezier(0.16, -0.88, 0.97, 0.53);
@@ -41,14 +40,22 @@
     opacity: 0;
   }
 }
+/* font-family: 'Shantell Sans', cursive; */
+/* @mixin hero-mobile {
+    height: 100vh;
+    background: url('/assets/uploads/images/pexels-vishnu-r-nair-1105666.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+} */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* body {
-} */
 .mainContainer {
   width: 100%;
 }
@@ -145,6 +152,52 @@
   background-size: cover;
   position: relative;
   transition: background-image 0.5s ease-in-out;
+}
+.mainContainer header .tours-wrapper {
+  width: 335px;
+  position: absolute;
+  top: 6.5rem;
+  left: 20px;
+  border: 2px solid #505050;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Shantell Sans", cursive;
+  text-transform: capitalize;
+}
+.mainContainer header .tours-wrapper h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 2em;
+}
+.mainContainer header .tours-wrapper .tours-name {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: #fff;
+}
+.mainContainer header .tours-wrapper .tours-name h3 {
+  font-weight: 900;
+}
+.mainContainer header .tours-wrapper .tours-contents {
+  margin-top: 1em;
+}
+.mainContainer header .tours-wrapper .tours-contents .tours-content-position {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: #fff;
+  margin-bottom: 1.6em;
+}
+.mainContainer header .tours-wrapper .tours-contents .tours-content-position p {
+  font-weight: 700;
+  text-align: center;
+}
+.mainContainer header .tours-wrapper .tours-contents .tours-content-position p span {
+  font-weight: 200;
+}
+.mainContainer header .tours-wrapper .tours-contents .tours-content-position p:first-child {
+  font-size: 1em;
+}
+.mainContainer header .tours-wrapper.active {
+  visibility: hidden;
 }
 .mainContainer header .form-wrapper {
   display: flex;
