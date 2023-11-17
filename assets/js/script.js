@@ -24,37 +24,38 @@ buttonBurger.addEventListener('click', (e) => {
 const inputValue = document.querySelector('.add-email');
 const buttonSubmit = document.getElementById('submitButton');
 const contentBox = document.getElementsByTagName('header');
-
-buttonSubmit.addEventListener('click', (e) => {
-    e.preventDefault();
-    // Når knappen trykkes skal værdien af input læses og godkendes med email validering
-    if (inputValue.value.match(validateEmail())) {
-        const errorMessage = document.querySelector('.error-message');
-        buttonSubmit.style.width = 'calc(100% - 2px)';
-        buttonText = document.querySelector('.before-submit');
-        buttonText.innerText = 'Subscribed';
-        inputValue.style = 'border: none;';
-        if (errorMessage) {
-            errorMessage.classList.remove('error-message');
+if (buttonSubmit) {
+    buttonSubmit.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Når knappen trykkes skal værdien af input læses og godkendes med email validering
+        if (inputValue.value.match(validateEmail())) {
+            const errorMessage = document.querySelector('.error-message');
+            buttonSubmit.style.width = 'calc(100% - 2px)';
+            buttonText = document.querySelector('.before-submit');
+            buttonText.innerText = 'Subscribed';
+            inputValue.style = 'border: none;';
+            if (errorMessage) {
+                errorMessage.classList.remove('error-message');
+            }
+        } else if (inputValue.value === ''){
+            inputValue.style = 'border: 1px solid red; border-radius: 20px;';
+    
+        } else {
+            inputValue.style = 'border: 1px solid red; border-radius: 20px;';
+            let errorBox = document.querySelector('.error-message');
+    
+            if(!errorBox) {
+                errorBox = document.createElement('div');
+                errorBox.classList.add('error-message');
+                contentBox[0].appendChild(errorBox);
+            }
+            
+            let errorHtml = `<p>please type a valid email address!</p>`;
+    
+            errorBox.innerHTML = errorHtml;
         }
-    } else if (inputValue.value === ''){
-        inputValue.style = 'border: 1px solid red; border-radius: 20px;';
-
-    } else {
-        inputValue.style = 'border: 1px solid red; border-radius: 20px;';
-        let errorBox = document.querySelector('.error-message');
-
-        if(!errorBox) {
-            errorBox = document.createElement('div');
-            errorBox.classList.add('error-message');
-            contentBox[0].appendChild(errorBox);
-        }
-        
-        let errorHtml = `<p>please type a valid email address!</p>`;
-
-        errorBox.innerHTML = errorHtml;
-    }
-});
+    });   
+}
 function validateEmail() {
     const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return validRegex;     
