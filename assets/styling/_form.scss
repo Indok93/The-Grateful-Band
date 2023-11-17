@@ -61,4 +61,17 @@
             }
         }
     }
+    .error-message {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 27vh;
+        width: 100%;
+        color: red;
+        @include font;
+        font-weight: 900;
+        font-size: 1.2rem;
+        word-spacing: -2px;
+        letter-spacing: -1.5px;
+    }
 }
